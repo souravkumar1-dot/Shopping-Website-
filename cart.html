@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<h1 style="text-align:center;">🛒 Shopping Cart</h1>
+
+<div id="cartItems"></div>
+
+<h2 style="text-align:center;">
+Total: ₹<span id="total">0</span>
+</h2>
+
+<div style="text-align:center; margin:20px;">
+    <button onclick="checkout()">
+        Proceed to Checkout
+    </button>
+</div>
+
+<script src="../script.js"></script>
+
+<script>
+displayCart();
+</script>
+
+</body>
+</html>

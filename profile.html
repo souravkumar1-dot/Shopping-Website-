@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Profile</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<div class="checkout">
+
+<h2>User Profile</h2>
+
+<h3 id="userName"></h3>
+
+<h4 id="userEmail"></h4>
+
+<button onclick="logout()">
+
+Logout
+
+</button>
+
+</div>
+
+<script src="../script.js"></script>
+
+<script>
+
+document.getElementById("userName").innerHTML=
+
+localStorage.getItem("name");
+
+document.getElementById("userEmail").innerHTML=
+
+localStorage.getItem("email");
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Shopping Website</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Header -->
+
+<header>
+
+<div class="logo">
+
+<h2>🛒 My Shop</h2>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="Search Products..."
+onkeyup="searchProduct()">
+
+<button>
+
+<i class="fas fa-search"></i>
+
+</button>
+
+</div>
+
+<div class="header-icons">
+
+<a href="pages/profile.html">
+
+<i class="fas fa-user"></i>
+
+</a>
+
+<a href="pages/wishlist.html">
+
+<i class="fas fa-heart"></i>
+
+<span id="wishlistCount">0</span>
+
+</a>
+
+<a href="pages/cart.html">
+
+<i class="fas fa-shopping-cart"></i>
+
+<span id="cartCount">0</span>
+
+</a>
+
+</div>
+
+</header>
+
+<!-- Navigation -->
+
+<nav>
+
+<ul>
+
+<li onclick="filterProduct('all')">All</li>
+
+<li onclick="filterProduct('mobile')">Mobiles</li>
+
+<li onclick="filterProduct('laptop')">Laptops</li>
+
+<li onclick="filterProduct('fashion')">Fashion</li>
+
+<li onclick="filterProduct('electronics')">Electronics</li>
+
+</ul>
+
+</nav>
+
+<!-- Banner -->
+
+<section class="banner">
+
+<h1>MEGA SALE</h1>
+
+<p>Up To 70% OFF</p>
+
+<button>Shop Now</button>
+
+</section>
+
+<!-- Products -->
+
+<section class="products">
+
+<!-- Mobile -->
+
+<div class="card product mobile">
+
+<img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400"
+alt="iPhone 15"
+onclick="viewProduct('iPhone 15',69999)"
+style="cursor:pointer;">
+
+<h3>iPhone 15</h3>
+
+<h4>₹69,999</h4>
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+<button onclick="addCart('iPhone 15',69999)">
+Add to Cart
+</button>
+
+<button onclick="addWishlist('iPhone 15',69999)">
+❤️ Wishlist
+</button>
+
+</div>
+
+<!-- Laptop -->
+
+<div class="card product laptop">
+
+<img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=400"
+alt="Gaming Laptop"
+onclick="viewProduct('Gaming Laptop',79999)"
+style="cursor:pointer;">
+
+<h3>Gaming Laptop</h3>
+
+<h4>₹79,999</h4>
+
+<div class="rating">
+
+⭐⭐⭐⭐☆
+
+</div>
+
+<button onclick="addCart('Gaming Laptop',79999)">
+Add to Cart
+</button>
+
+<button onclick="addWishlist('Gaming Laptop',79999)">
+❤️ Wishlist
+</button>
+
+</div>
+
+<!-- Headphones -->
+
+<div class="card product electronics">
+
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"
+alt="Headphones"
+onclick="viewProduct('Headphones',2999)"
+style="cursor:pointer;">
+<h3>Headphones</h3>
+
+<h4>₹2,999</h4>
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+<button onclick="addCart('Headphones',2999)">
+Add to Cart
+</button>
+
+<button onclick="addWishlist('Headphones',2999)">
+❤️ Wishlist
+</button>
+
+</div>
+
+<!-- Shoes -->
+
+<div class="card product fashion">
+
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400"
+alt="Shoes"
+onclick="viewProduct('Shoes',1999)"
+style="cursor:pointer;">
+<h3>Shoes</h3>
+
+<h4>₹1,999</h4>
+
+<div class="rating">
+
+⭐⭐⭐⭐☆
+
+</div>
+
+<button onclick="addCart('Shoes',1999)">
+Add to Cart
+</button>
+
+<button onclick="addWishlist('Shoes',1999)">
+❤️ Wishlist
+</button>
+
+</div>
+
+<!-- Watch -->
+
+<div class="card product fashion">
+
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"
+alt="Watch"
+onclick="viewProduct('Watch',4999)"
+style="cursor:pointer;">
+
+<h3>Watch</h3>
+
+<h4>₹4,999</h4>
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+<button onclick="addCart('Watch',4999)">
+Add to Cart
+</button>
+
+<button onclick="addWishlist('Watch',4999)">
+❤️ Wishlist
+</button>
+
+</div>
+
+<!-- Speaker -->
+
+<div class="card product electronics">
+
+<img src="https://images.unsplash.com/photo-1589003077984-894e133dabab?w=400"
+alt="Bluetooth Speaker"
+onclick="viewProduct('Bluetooth Speaker',1499)"
+style="cursor:pointer;">
+<h3>Bluetooth Speaker</h3>
+
+<h4>₹1,499</h4>
+
+<div class="rating">
+
+⭐⭐⭐⭐☆
+
+</div>
+
+<button onclick="addCart('Bluetooth Speaker',1499)">
+Add to Cart
+</button>
+
+<button onclick="addWishlist('Bluetooth Speaker',1499)">
+❤️ Wishlist
+</button>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<h2>© 2026 My Shopping Website</h2>
+
+<p>Made with ❤️ using HTML, CSS & JavaScript</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
