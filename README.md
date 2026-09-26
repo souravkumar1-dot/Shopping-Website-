@@ -66,7 +66,7 @@ Shopping Website/
 
 ## 🌐 Live Demo
 
-(Add your GitHub Pages or Netlify link here.)
+https://souravkumar1-dot.github.io/Shopping-Website-/
 
 ## 👨‍💻 Author
 
